@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   serverElements = [{type:'server', name:'Testserver',content:'Just a teste!'}];
 
-
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
       this.serverElements.push({
         type: 'server',
@@ -25,6 +24,16 @@ export class AppComponent {
       });
     }
 
+    onChangeFirst(){
+      if(this.serverElements[0]) {
+        this.serverElements[0].name = "Changed!";
+      } else
+      console.log('Lista de elementos está vazia')
+    }
+
+    onDestroyFirst(){
+      this.serverElements.splice(0,1);
+    }
 
 
 }

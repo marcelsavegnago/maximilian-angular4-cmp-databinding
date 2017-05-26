@@ -13,7 +13,6 @@ export class CockipitComponent implements OnInit {
   // newServerContent = '';
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
 
-
   constructor() { }
 
   ngOnInit() {
